@@ -1,0 +1,8 @@
+library("tidyverse")
+library(ggplot2)
+
+ggplot(SuperBowlCoinToss, aes(Win, fill = Results), stats = "bin") + 
+  geom_histogram(binwidth = 0.975, bins = 30, color = "gold") + 
+  theme(legend.position = "top") +
+  labs(title="Counts of The Super Bowl Winner's Coin Toss Results since 2009",
+       x ="Coin Toss Results", y = "Count")  
