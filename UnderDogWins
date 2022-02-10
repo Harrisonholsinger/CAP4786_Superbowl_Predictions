@@ -1,0 +1,8 @@
+library("tidyverse")
+library(ggplot2)
+
+ggplot(SuperBowlSpreads, aes(Wins, fill = Results), stats = "bin") + 
+  geom_histogram(binwidth = 0.975, bins = 30, color = "gold") + 
+  theme(legend.position = "top") +
+  labs(title="Counts of The Underdog Winning the Super Bowl since 2002",
+       x ="Underdog Win Odds", y = "Count")  
